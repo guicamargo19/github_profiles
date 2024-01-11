@@ -16,9 +16,25 @@ const ReposList = ({nomeUsuario}) => {
             }, 1500);
         });
     }, [nomeUsuario]);
+
+    /* 
+        inserir o .catch no fetch
+
+        const [deuErro, setDeuErro] = useState(false); 
+        
+        .catch(e => {
+            setDeuErro(true);
+        })
+
+        estilizar o input do usuário
+        
+        */
     
     return (
         <div className="container">
+            {/* {deuErro && (
+                <span>O usuário digitado não corresponde a um usuário existente.</span>
+            )  } */}
             {carregando ? (
                 <h1>Carregando...</h1>
             ) : (
