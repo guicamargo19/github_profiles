@@ -4,56 +4,49 @@ import styles from './ReposList.module.css';
 const ReposList = ({nomeUsuario}) => {
     const [repos, setRepos] = useState([]);
     const [carregando, setCarregando] = useState(true);
+    const [erro, setErro] = useState(false);
     
     useEffect(()=> {
-        setCarregando(true);
         fetch(`https://api.github.com/users/${nomeUsuario}/repos`)
-        .then(resposta => resposta.json())
+        .then(resposta => resposta.ok ? resposta.json()
         .then(respostaJson => {
             setTimeout(() => {
                 setCarregando(false);
                 setRepos(respostaJson);
-            }, 1500);
-        });
+            }, 1000);
+            setCarregando(true);
+            setErro(false);
+        }) : (setErro(true), setCarregando(false)));
+        
     }, [nomeUsuario]);
 
-    /* 
-        inserir o .catch no fetch
-
-        const [deuErro, setDeuErro] = useState(false); 
-        
-        .catch(e => {
-            setDeuErro(true);
-        })
-
-        estilizar o input do usuário
-        
-        */
-    
     return (
         <div className="container">
-            {/* {deuErro && (
-                <span>O usuário digitado não corresponde a um usuário existente.</span>
-            )  } */}
-            {carregando ? (
-                <h1>Carregando...</h1>
-            ) : (
-                <ul className={styles.list}>
-                    {repos.map(({id, name, language, html_url}) => (
-                        <li className={styles.listItem} key={id}>
-                            <div className={styles.itemName}>
-                                <b>Nome:</b>
-                                {name}
-                            </div>
-                            <div className={styles.itemLanguage}>
-                                <b>Linguagem:</b>
-                                {language}
-                            </div>
-                            <a className={styles.itemLink} target="_blank" href={html_url}>Visitar no Github</a>
-                        </li>
-                    ))}
-                </ul>
+            {erro ? (
+                <span className={styles.error}>Usuário digitado não corresponde a um usuário existente.</span>
+            ):
+            <div>
+                {carregando ? (
+                    <h2>Carregando...</h2>
+                ) : (
+                    <ul className={styles.list}>
+                        {repos.map(({id, name, language, html_url}) => (
+                            <li className={styles.listItem} key={id}>
+                                <div className={styles.itemName}>
+                                    <b>Projeto:</b>
+                                    {name}
+                                </div>
+                                <div className={styles.itemLanguage}>
+                                    <b>Linguagem/Tecnologia:</b>
+                                    {language}
+                                </div>
+                                <a className={styles.itemLink} target="_blank" href={html_url}>Visitar no Github</a>
+                            </li>
+                        ))}
+                    </ul>
                 )}
+            </div>
+            }
         </div>
     )
 }

@@ -1,0 +1,23 @@
+.search {
+    background-color: var(--corPrincipal);
+    color: var(--corBranca);
+    text-align: center;
+}
+
+.search h1 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.search p {
+    padding-bottom: 16px;
+}
+
+.search input {
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 12px;
+    outline-color: var(--corButtonHover);
+}

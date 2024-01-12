@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     list-style: none;
 }
 
@@ -16,6 +16,7 @@
 /* Variaveis */
 :root {
     --corPrincipal: darkslategrey;
+    --corButtonHover: rgb(69, 117, 117);
     --corSecundaria: #111;
     --corBranca: #fff;
 }

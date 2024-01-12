@@ -1,11 +1,18 @@
+h2 {
+    color: var(--corPrincipal);
+    padding-bottom: 80px;
+}
+
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    padding-bottom: 16px;
 }
 
 .listItem {
     padding: 16px;
+    border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -16,11 +23,28 @@
 
 .itemLink {
     display: block;
-    background-color: var(--corPrincipal);
+    background-color: var(--corButtonHover);
     color: var(--corBranca);
     font-weight: bold;
     text-align: center;
     margin-top: 8px;
     padding: 8px;
     text-decoration: none;
+    border-radius: 5px;
+}
+
+.itemLink:hover {
+    background-color: var(--corPrincipal);
+}
+
+.black {
+    color: #000;
+}
+
+.error {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding-bottom: 60px;
+    color: var(--corPrincipal);
 }
