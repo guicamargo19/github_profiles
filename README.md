@@ -1,8 +1,8 @@
-# GitHub Profile
+# GitHub Profilea
 
 ## Apresentação do projeto
 
-
+https://github.com/guicamargo19/github_profile/assets/133445061/2c3682ec-ad97-4c87-9eb7-b21ec6735fa5
 
 Projeto desenvolvido em **ReactJS** e estilização com **CSS Modules**, e permite digitar o usuário do github que deseja
 ver o profile. A página traz o avatar e o nome do usuário requerido, assim como o todo o portfólio público, oferencendo
