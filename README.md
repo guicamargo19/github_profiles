@@ -1,4 +1,4 @@
-# GitHub Profilea
+# GitHub Profiles
 
 ## Apresentação do projeto
 
