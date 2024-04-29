@@ -1,6 +1,8 @@
 # GitHub Profile
 
-<img src="./src/assets/profiles.png">
+## Apresentação do projeto
+
+
 
 Projeto desenvolvido em **ReactJS** e estilização com **CSS Modules**, e permite digitar o usuário do github que deseja
 ver o profile. A página traz o avatar e o nome do usuário requerido, assim como o todo o portfólio público, oferencendo

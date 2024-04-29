@@ -17,15 +17,37 @@
 .footer__links__item {
     padding: 8px;
     padding-bottom: 12px;
-    font-size: 30px;
+    font-size: 24px;
     text-decoration: none;
+    transition: all ease-in-out .2s;
+}
+
+.footer__links__item:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
 }
 
 .footer__links__item a {
     color: var(--corBranca);
 }
 
-.footer__main__text,
-.footer__last__text  {
+.footer__main__text {
     padding-bottom: 16px;
+}
+
+.footer__main__text a {
+    color: var(--corBranca);
+    text-decoration: none;
+    transition: all ease-in-out .2s;
+}
+
+.footer__main__text a:hover {
+    transition: all ease-in-out .2s;
+    color: var(--corButtonHover);
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        font-size: 12px;
+    }
 }

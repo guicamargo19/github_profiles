@@ -2,6 +2,7 @@
     background-color: var(--corPrincipal);
     color: var(--corBranca);
     text-align: center;
+    border: none;
 }
 
 .search h1 {
@@ -15,9 +16,22 @@
 
 .search input {
     padding: 8px;
+    width: 240px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 4px;
     border: none;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     outline-color: var(--corButtonHover);
+    font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .search h1 {
+        font-size: 22px;
+        padding-top: 20px;
+    }
+
+    .search p {
+        padding-bottom: 14px;
+    }
 }

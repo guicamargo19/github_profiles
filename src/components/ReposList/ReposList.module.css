@@ -5,20 +5,26 @@ h2 {
 
 .list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-    padding-bottom: 16px;
+    grid-template-columns: 33% 33% 34%;
+    row-gap: 4px;
+    column-gap: 14px;
+    margin-bottom: 40px;
 }
 
 .listItem {
-    padding: 16px;
-    border-radius: 5px;
+    padding: 6px;
+    border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 140px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
 }
 
 .itemName b,
-.itemLanguge b {
+.itemLanguage b {
     margin-right: 8px;
+    display: inline-flex;
 }
 
 .itemLink {
@@ -30,11 +36,13 @@ h2 {
     margin-top: 8px;
     padding: 8px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    transition: all ease-in-out .2s;
 }
 
 .itemLink:hover {
     background-color: var(--corPrincipal);
+    transition: all ease-in-out .2s;
 }
 
 .black {
@@ -47,4 +55,16 @@ h2 {
     text-align: center;
     padding-bottom: 60px;
     color: var(--corPrincipal);
+}
+
+@media screen and (max-width: 767px) {
+    .list {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .list {
+        grid-template-columns: 50% 50%;
+    }
 }

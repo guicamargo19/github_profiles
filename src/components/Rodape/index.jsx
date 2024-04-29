@@ -1,9 +1,13 @@
 import styles from './Rodape.module.css';
 
 const Rodape = () => {
+    const getYear = () => {
+        return new Date().getFullYear()
+      }
+
     return (
         <footer className={styles.footer}>
-        <div>
+        <div className='container'>
             <ul className={styles.footer__links}>
                 <li className={styles.footer__links__item}>
                     <a href="https://www.linkedin.com/in/guilherme-ferreira-camargo/">
@@ -17,10 +21,13 @@ const Rodape = () => {
                 </li>
             </ul>
             <p className={styles.footer__main__text}>
-                ® 2024 Guilherme Camargo. Todos os direitos reservados.
-            </p>
-            <p className={styles.footer__last__text}>
-                Página desenvolvida no curso de Full Stack Python na EBAC - Escola Britânica de Artes Criativas e Tecnologia.              
+            <p>
+                {getYear()}- &copy;
+                <a href="https://portfolio-pink-omega-63.vercel.app/">
+                    <strong> Portfólio Guilherme Camargo</strong>
+                </a>{' '}
+                - Todos os direitos reservados
+                </p>
             </p>
         </div>
     </footer>
